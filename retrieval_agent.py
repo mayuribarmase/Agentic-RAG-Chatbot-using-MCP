@@ -1,11 +1,9 @@
-# retrieval_agent.py
-
 from sentence_transformers import SentenceTransformer
 import faiss
 import numpy as np
 
-# Choose the best open model as of 2025
-EMBEDDING_MODEL = "BAAI/bge-base-en-v1.5"  # Or "intfloat/e5-base-v2", "nomic-ai/nomic-embed-text-v1"
+
+EMBEDDING_MODEL = "BAAI/bge-base-en-v1.5"  
 
 class RetrievalAgent:
     def __init__(self):
@@ -26,8 +24,3 @@ class RetrievalAgent:
         distances, indices = self.index.search(query_emb, top_k)
         result = [self.documents[i] for i in indices[0]]
         return result
-
-# Example usage:
-# agent = RetrievalAgent()
-# agent.build_knowledge_base(["some text", "other doc"])
-# print(agent.retrieve("some query"))
