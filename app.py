@@ -18,7 +18,7 @@ def chunk_text(text, chunk_size=500):
 
 st.title("Agentic RAG Chatbot")
 
-hf_token = "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"
+hf_token = <"Enter your HF token">
 
 uploaded_file = st.file_uploader("Upload your document (PDF/DOCX/PPTX/CSV/TXT/MD)", type=['pdf', 'docx', 'pptx', 'csv', 'txt', 'md'])
 
@@ -52,4 +52,5 @@ if uploaded_file and hf_token:
 
 elif not hf_token:
     st.info("Please enter your Hugging Face token to use the LLM for answering.")
+
 
