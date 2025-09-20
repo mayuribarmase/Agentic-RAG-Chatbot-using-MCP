@@ -1,9 +1,7 @@
-# llm_response_agent.py
-
 import google.generativeai as genai
 
-# HARD-CODE your Google Gemini API key below
-GEMINI_API_KEY = "AIzaSyDAgoVw_aDacZv7Q053c2QvzsiFIqM02w0"   # <-- Replace with your real key
+
+GEMINI_API_KEY = <"Replace with your real key">   
 
 class LLMResponseAgent:
     def __init__(self):
@@ -19,6 +17,3 @@ class LLMResponseAgent:
         response = self.model.generate_content(prompt)
         return response.text
 
-# Usage:
-# agent = LLMResponseAgent()
-# answer = agent.generate_answer("What is ...", ["Context segment 1", ...])
